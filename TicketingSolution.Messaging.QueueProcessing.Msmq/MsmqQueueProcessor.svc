@@ -1,0 +1,5 @@
+﻿<%@ ServiceHost Language="C#" Debug="true"
+    Service="TicketingSolutionMsmqQueueProcessing.MsmqQueueProcessor" 
+    CodeBehind="MsmqQueueProcessor.svc.cs" 
+    Factory="Ninject.Extensions.Wcf.NinjectServiceHostFactory" 
+%>

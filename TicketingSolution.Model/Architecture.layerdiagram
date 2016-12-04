@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="0cb241fe-1b1c-400c-8643-384e1278f9ef" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="2f8c579c-0ab2-4fc3-8701-f3acc57cbef7" name="FrontEnd">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="5da76887-9f10-4bdb-85c1-eaffca9337de" direction="Forward">
+          <layerMoniker Id="4d2dea7c-0251-4def-bc75-65b153e3490f" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="2250bb10-90be-48cb-9691-13850e4bafca" direction="Forward">
+          <layerMoniker Id="b447718f-f448-440a-88e9-8843ee7938b8" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="5c43a98b-3be8-4e44-9a1c-f27ca383086c" direction="Forward">
+          <layerMoniker Id="3eaaf7cf-fc3b-47cc-a3cc-ad89e7d5b2c7" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="1d7197df-762c-4b75-a726-ea2c515b2ce6" name="FrontEnd">
+          <ArtifactNode Label="FrontEnd" Category="CodeSchema_Project" Id="(Assembly=../FrontEnd)">
+            <Category Ref="CodeMap_SolutionFolder" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=../TicketingSolution.FrontEnd/bin/TicketingSolution.FrontEnd.dll)" Label="TicketingSolution.FrontEnd.dll" Category="CodeSchema_Assembly">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="51bd15d5-cf92-474c-a2c7-5c574940c9b8" name="Messaging">
+      <childLayers>
+        <layer Id="cad35208-4088-43f8-ad2b-47a393d74024" name="QueueProcessing">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="5b8877b2-70f0-4842-ac9e-3e79ae784b5f" direction="Forward">
+              <layerMoniker Id="3eaaf7cf-fc3b-47cc-a3cc-ad89e7d5b2c7" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="4e9bcb0c-6f44-4c12-88bc-5939f9c83591" name="WcfMsmq">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="02df6cb7-af56-4d59-90e2-2a74ae49d417" direction="Forward">
+                  <layerMoniker Id="6f10ff68-b273-4771-b833-56525e470d0d" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="05e5c29e-d2ef-4125-9194-840b1bc32ac8" name="TicketingSolution.Messaging.QueueProcessing.Msmq">
+                  <ArtifactNode Label="TicketingSolution.Messaging.QueueProcessing.Msmq" Category="CodeSchema_Project" Id="(Assembly=../TicketingSolution.Messaging.QueueProcessing.Msmq/TicketingSolution.Messaging.QueueProcessing.Msmq.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueProcessing.Msmq)" Label="TicketingSolution.Messaging.QueueProcessing.Msmq.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="cc56b24d-de02-4cad-99c8-c71cccdce078" name="NServiceBus">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="26aa551d-8d66-4439-999c-ef3df6bc4192" direction="Forward">
+                  <layerMoniker Id="6f10ff68-b273-4771-b833-56525e470d0d" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="7ff3349a-90d9-474e-9e11-bd0d59856ed3" name="TicketingSolution.Messaging.QueueProcessing.NServiceBus">
+                  <ArtifactNode Label="TicketingSolution.Messaging.QueueProcessing.NServiceBus" Category="CodeSchema_Project" Id="(Assembly=../TicketingSolution.Messaging.QueueProcessing.Msmq.NServiceBus/TicketingSolution.Messaging.QueueProcessing.NServiceBus.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueProcessing.NServiceBus)" Label="TicketingSolution.Messaging.QueueProcessing.NServiceBus.exe" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.exe" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="8c838fdf-aa21-49ec-94f5-f255a0ca6d63" name="QueueProcessing">
+              <ArtifactNode Label="QueueProcessing" Category="CodeSchema_Project" Id="(Assembly=../Messaging/QueueProcessing)">
+                <Category Ref="CodeMap_SolutionFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueProcessing.Msmq)" Label="TicketingSolution.Messaging.QueueProcessing.Msmq.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueProcessing.NServiceBus)" Label="TicketingSolution.Messaging.QueueProcessing.NServiceBus.exe" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.exe" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="3b9dd61e-f01e-45e8-8a37-b8676ffc81fb" name="QueueWriting">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="46597015-2cfb-4e27-ad8d-3c70c4e897ad" direction="Forward">
+              <layerMoniker Id="3eaaf7cf-fc3b-47cc-a3cc-ad89e7d5b2c7" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="4d2dea7c-0251-4def-bc75-65b153e3490f" name="Interfaces">
+              <references>
+                <reference Id="94ef5181-d728-4585-9efb-4e144a4f4935" name="TicketingSolution.Messaging.QueueWriting.Interfaces">
+                  <ArtifactNode Label="TicketingSolution.Messaging.QueueWriting.Interfaces" Category="CodeSchema_Project" Id="(Assembly=../TicketingSolution.Messaging.QueueWriting.Interfaces/TicketingSolution.Messaging.QueueWriting.Interfaces.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueWriting.Interfaces)" Label="TicketingSolution.Messaging.QueueWriting.Interfaces.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="8318705a-81e3-45b9-a73b-0137f39b5f42" name="WcfMsmq">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="d5c86b32-3395-44f7-844b-ebd7d6255ebd" direction="Forward">
+                  <layerMoniker Id="4d2dea7c-0251-4def-bc75-65b153e3490f" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="ef8acc39-633d-428e-bf8d-6157937bdc75" name="TicketingSolution.Messaging.QueueWriting.Msmq">
+                  <ArtifactNode Label="TicketingSolution.Messaging.QueueWriting.Msmq" Category="CodeSchema_Project" Id="(Assembly=../TicketingSolution.Messaging.QueueWriting.Msmq/TicketingSolution.Messaging.QueueWriting.Msmq.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueWriting.Msmq)" Label="TicketingSolution.Messaging.QueueWriting.Msmq.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="ea24bd03-b435-4887-9277-f0daeb530a93" name="NServiceBus">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="a1b23a41-2755-4333-8cf2-dc4bfce2da53" direction="Forward">
+                  <layerMoniker Id="4d2dea7c-0251-4def-bc75-65b153e3490f" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="13244c0b-c8ef-4edd-8b4b-f2db9f2ba25d" name="TicketingSolution.Messaging.QueueWriting.NServiceBus">
+                  <ArtifactNode Label="TicketingSolution.Messaging.QueueWriting.NServiceBus" Category="CodeSchema_Project" Id="(Assembly=../TicketingSolution.Messaging.QueueWriting.NServiceBus/TicketingSolution.Messaging.QueueWriting.NServiceBus.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueWriting.NServiceBus)" Label="TicketingSolution.Messaging.QueueWriting.NServiceBus.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="4d8309fb-4191-40b4-bc78-609612cd0f24" name="SqlServiceBroker">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="f7b5d19c-32f8-43be-97d2-bddc6588a607" direction="Forward">
+                  <layerMoniker Id="4d2dea7c-0251-4def-bc75-65b153e3490f" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="ad79b841-87ca-4e1f-996d-6b51f77e3479" direction="Forward">
+                  <layerMoniker Id="9236727b-927e-457d-9f93-45bb5b41c016" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="07fcd31a-90a3-4252-996a-36a6472e879f" name="TicketingSolution.Messaging.QueueWriting.SqlServiceBroker">
+                  <ArtifactNode Label="TicketingSolution.Messaging.QueueWriting.SqlServiceBroker" Category="CodeSchema_Project" Id="(Assembly=../TicketingSolution.Messaging.QueueWriting.SqlServiceBroker/TicketingSolution.Messaging.QueueWriting.SqlServiceBroker.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueWriting.SqlServiceBroker)" Label="TicketingSolution.Messaging.QueueWriting.SqlServiceBroker.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="f4b4d42c-a0f3-443b-894d-4e0df1e8d7cb" name="QueueWriting">
+              <ArtifactNode Label="QueueWriting" Category="CodeSchema_Project" Id="(Assembly=../Messaging/QueueWriting)">
+                <Category Ref="CodeMap_SolutionFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueWriting.Msmq)" Label="TicketingSolution.Messaging.QueueWriting.Msmq.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueWriting.Interfaces)" Label="TicketingSolution.Messaging.QueueWriting.Interfaces.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueWriting.NServiceBus)" Label="TicketingSolution.Messaging.QueueWriting.NServiceBus.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueWriting.SqlServiceBroker)" Label="TicketingSolution.Messaging.QueueWriting.SqlServiceBroker.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="cb95636b-c0f7-4036-8c28-775134e27829" name="Messaging">
+          <ArtifactNode Label="Messaging" Category="CodeSchema_Project" Id="(Assembly=../Messaging)">
+            <Category Ref="CodeMap_SolutionFolder" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueProcessing.Msmq)" Label="TicketingSolution.Messaging.QueueProcessing.Msmq.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueProcessing.NServiceBus)" Label="TicketingSolution.Messaging.QueueProcessing.NServiceBus.exe" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.exe" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueWriting.Msmq)" Label="TicketingSolution.Messaging.QueueWriting.Msmq.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueWriting.Interfaces)" Label="TicketingSolution.Messaging.QueueWriting.Interfaces.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueWriting.NServiceBus)" Label="TicketingSolution.Messaging.QueueWriting.NServiceBus.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.QueueWriting.SqlServiceBroker)" Label="TicketingSolution.Messaging.QueueWriting.SqlServiceBroker.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.Messaging.NServiceBusMessages)" Label="TicketingSolution.Messaging.NServiceBusMessages.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="3eaaf7cf-fc3b-47cc-a3cc-ad89e7d5b2c7" name="Common.BusinessEntities">
+      <references>
+        <reference Id="ecdffe61-576e-4584-b02f-266a24264aa8" name="Common">
+          <ArtifactNode Label="Common" Category="CodeSchema_Project" Id="(Assembly=../Common)">
+            <Category Ref="CodeMap_SolutionFolder" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.BusinessEntities)" Label="TicketingSolution.BusinessEntities.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="e8aa62c5-3168-486b-a9e6-4b1b5ebb30ea" name="DataAccess">
+      <childLayers>
+        <layer Id="d0cfa974-cd54-484b-bfa8-9437c433e387" name="Direct">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="f8c4683b-b4b3-4370-a259-127c1a08a4a0" direction="Forward">
+              <layerMoniker Id="daa7888f-3eeb-4f14-b7e6-a7c0e52afa02" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="2e1d8b11-3eb8-4e9a-b2f7-db13235dac44" name="Impl">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="2f171f6d-c602-47f6-bb23-ac8a7c5418b9" direction="Forward">
+                  <layerMoniker Id="b447718f-f448-440a-88e9-8843ee7938b8" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="7e469e54-0927-4bcf-bdb3-b5221e8e81c5" direction="Forward">
+                  <layerMoniker Id="125c2462-0684-4788-8185-cf4a6b618c6c" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="978d3b6b-3ba9-40fb-a966-e862858d2d8d" name="TicketingSolution.DataAccess.Direct.Impl">
+                  <ArtifactNode Label="TicketingSolution.DataAccess.Direct.Impl" Category="CodeSchema_Project" Id="(Assembly=../TicketingSolution.DataAccess.Direct.Impl/TicketingSolution.DataAccess.Direct.Impl.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Direct.Impl)" Label="TicketingSolution.DataAccess.Direct.Impl.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="b447718f-f448-440a-88e9-8843ee7938b8" name="Interfaces">
+              <references>
+                <reference Id="f9b91ba4-c502-484b-b9ea-a8f8d69feb9a" name="TicketingSolution.DataAccess.Direct.Interfaces">
+                  <ArtifactNode Label="TicketingSolution.DataAccess.Direct.Interfaces" Category="CodeSchema_Project" Id="(Assembly=../TicketingSolution.DataAccess.Direct.Interfaces/TicketingSolution.DataAccess.Direct.Interfaces.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Direct.Interfaces)" Label="TicketingSolution.DataAccess.Direct.Interfaces.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="60d55d94-6529-45e9-ae7a-1fbcc4f13991" name="Direct">
+              <ArtifactNode Label="Direct" Category="CodeSchema_Project" Id="(Assembly=../DataAccess/Direct)">
+                <Category Ref="CodeMap_SolutionFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Direct.Impl)" Label="TicketingSolution.DataAccess.Direct.Impl.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Direct.Interfaces)" Label="TicketingSolution.DataAccess.Direct.Interfaces.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="a129e142-e674-40ee-b7f3-0a0c607d40ef" name="Queueable">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="930a703f-ea0b-42cd-80f5-18a83d32cf5d" direction="Forward">
+              <layerMoniker Id="daa7888f-3eeb-4f14-b7e6-a7c0e52afa02" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="a4788f34-4fcb-4a04-afb4-9d3e83cd901c" name="Impl">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="60979830-9b64-4f54-b898-f70c365d6cee" direction="Forward">
+                  <layerMoniker Id="6f10ff68-b273-4771-b833-56525e470d0d" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="68d28366-08b3-4b45-bb1b-69aadfe6eed1" direction="Forward">
+                  <layerMoniker Id="125c2462-0684-4788-8185-cf4a6b618c6c" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <references>
+                <reference Id="8b479ae2-fab9-48c3-8f67-116ded9c273a" name="TicketingSolution.DataAccess.Queueable.Impl">
+                  <ArtifactNode Label="TicketingSolution.DataAccess.Queueable.Impl" Category="CodeSchema_Project" Id="(Assembly=../TicketingSolution.DataAccess.Queueable.Impl/TicketingSolution.DataAccess.Queueable.Impl.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Queueable.Impl)" Label="TicketingSolution.DataAccess.Queueable.Impl.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+            <layer Id="6f10ff68-b273-4771-b833-56525e470d0d" name="Interfaces">
+              <references>
+                <reference Id="1df9166f-54d9-4c9c-b7bb-6b2c0b2cc17d" name="TicketingSolution.DataAccess.Queueable.Interfaces">
+                  <ArtifactNode Label="TicketingSolution.DataAccess.Queueable.Interfaces" Category="CodeSchema_Project" Id="(Assembly=../TicketingSolution.DataAccess.Queueable.Interfaces/TicketingSolution.DataAccess.Queueable.Interfaces.csproj)">
+                    <Category Ref="File" />
+                  </ArtifactNode>
+                  <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Queueable.Interfaces)" Label="TicketingSolution.DataAccess.Queueable.Interfaces.dll" Category="CodeSchema_Assembly">
+                    <Category Ref="FileSystem.Category.FileOfType.dll" />
+                    <LinkCategory Ref="Produces" />
+                    <LinkCategory Ref="Represents" />
+                  </ExpandedNode>
+                </reference>
+              </references>
+            </layer>
+          </childLayers>
+          <references>
+            <reference Id="8b32d540-452d-4ae4-82dc-457065a43376" name="Queueable">
+              <ArtifactNode Label="Queueable" Category="CodeSchema_Project" Id="(Assembly=../DataAccess/Queueable)">
+                <Category Ref="CodeMap_SolutionFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Queueable.Impl)" Label="TicketingSolution.DataAccess.Queueable.Impl.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Queueable.Interfaces)" Label="TicketingSolution.DataAccess.Queueable.Interfaces.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="daa7888f-3eeb-4f14-b7e6-a7c0e52afa02" name="Entities">
+          <references>
+            <reference Id="e24c80b9-0fcb-4407-8cfd-ade80fc8a88a" name="TicketingSolution.DataAccess.Entities">
+              <ArtifactNode Label="TicketingSolution.DataAccess.Entities" Category="CodeSchema_Project" Id="(Assembly=../TicketingSolution.DataAccess.Entities/TicketingSolution.DataAccess.Entities.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Entities)" Label="TicketingSolution.DataAccess.Entities.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="3bb38523-c35d-4b93-a67a-aeaec26b1226" name="DataAccess">
+          <ArtifactNode Label="DataAccess" Category="CodeSchema_Project" Id="(Assembly=../DataAccess)">
+            <Category Ref="CodeMap_SolutionFolder" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Entities)" Label="TicketingSolution.DataAccess.Entities.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Queueable.Interfaces)" Label="TicketingSolution.DataAccess.Queueable.Interfaces.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Queueable.Impl)" Label="TicketingSolution.DataAccess.Queueable.Impl.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Direct.Impl)" Label="TicketingSolution.DataAccess.Direct.Impl.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=TicketingSolution.DataAccess.Direct.Interfaces)" Label="TicketingSolution.DataAccess.Direct.Interfaces.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="9236727b-927e-457d-9f93-45bb5b41c016" name="TicketingQueueInitiator&#xD;&#xA;Database" />
+    <layer Id="125c2462-0684-4788-8185-cf4a6b618c6c" name="TicketingDB" />
+  </layers>
+</layerModel>

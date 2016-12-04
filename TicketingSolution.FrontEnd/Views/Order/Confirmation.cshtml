@@ -1,0 +1,49 @@
+﻿@model TicketingSolution.BusinessEntities.OrderRequest
+
+@{
+    ViewBag.Title = "View1";
+}
+
+<h2>We received your order and we are processing it</h2>
+
+<div>
+    <h4>OrderRequest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Check processing status", "Status", new { id = Model.RequestId }) |
+</p>

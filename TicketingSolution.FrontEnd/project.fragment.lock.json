@@ -1,0 +1,162 @@
+{
+  "version": 2,
+  "exports": {
+    "TicketingSolution.BusinessEntities/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/TicketingSolution.BusinessEntities.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/TicketingSolution.BusinessEntities.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/TicketingSolution.BusinessEntities.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "TicketingSolution.DataAccess.Direct.Impl/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/TicketingSolution.DataAccess.Direct.Impl.dll": {}
+      },
+      "runtime": {
+        "../packages/EntityFramework.6.1.3/lib/net45/EntityFramework.SqlServer.dll": {},
+        "../packages/EntityFramework.6.1.3/lib/net45/EntityFramework.dll": {},
+        "bin/Debug/TicketingSolution.DataAccess.Direct.Impl.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/TicketingSolution.DataAccess.Direct.Impl.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "TicketingSolution.DataAccess.Direct.Interfaces/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/TicketingSolution.DataAccess.Direct.Interfaces.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/TicketingSolution.DataAccess.Direct.Interfaces.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/TicketingSolution.DataAccess.Direct.Interfaces.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "TicketingSolution.DataAccess.Entities/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/TicketingSolution.DataAccess.Entities.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/TicketingSolution.DataAccess.Entities.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/TicketingSolution.DataAccess.Entities.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "TicketingSolution.Messaging.QueueWriting.Interfaces/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/TicketingSolution.Messaging.QueueWriting.Interfaces.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/TicketingSolution.Messaging.QueueWriting.Interfaces.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/TicketingSolution.Messaging.QueueWriting.Interfaces.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "TicketingSolution.Messaging.QueueWriting.Msmq/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/TicketingSolution.Messaging.QueueWriting.Msmq.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/TicketingSolution.Messaging.QueueWriting.Msmq.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/TicketingSolution.Messaging.QueueWriting.Msmq.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "TicketingSolution.Messaging.QueueWriting.NServiceBus/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/TicketingSolution.Messaging.QueueWriting.NServiceBus.dll": {}
+      },
+      "runtime": {
+        "../packages/NServiceBus.6.0.3/lib/net452/NServiceBus.Core.dll": {},
+        "bin/Debug/TicketingSolution.Messaging.QueueWriting.NServiceBus.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/TicketingSolution.Messaging.QueueWriting.NServiceBus.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "TicketingSolution.Messaging.QueueWriting.SqlServiceBroker/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/TicketingSolution.Messaging.QueueWriting.SqlServiceBroker.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/TicketingSolution.Messaging.QueueWriting.SqlServiceBroker.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/TicketingSolution.Messaging.QueueWriting.SqlServiceBroker.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    },
+    "TicketingSolution.Messaging.NServiceBusMessages/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/TicketingSolution.Messaging.NServiceBusMessages.dll": {}
+      },
+      "runtime": {
+        "../packages/NServiceBus.6.0.3/lib/net452/NServiceBus.Core.dll": {},
+        "bin/Debug/TicketingSolution.Messaging.NServiceBusMessages.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/TicketingSolution.Messaging.NServiceBusMessages.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}

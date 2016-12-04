@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4b8e9e14-4316-4ad5-9a16-0014f0109f54" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>true</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/TicketingSolutionMsmqQueueProcessing/MsmqQueueProcessor.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MsmqQueueProcessor.wsdl" MetadataType="Wsdl" ID="32d24175-098c-4b0d-93ec-9bf48f63a477" SourceId="1" SourceUrl="http://localhost/TicketingSolutionMsmqQueueProcessing/MsmqQueueProcessor.svc?wsdl" />
+    <MetadataFile FileName="MsmqQueueProcessor.disco" MetadataType="Disco" ID="eaac5761-f8c1-448b-a8be-38ee27dbbce2" SourceId="1" SourceUrl="http://localhost/TicketingSolutionMsmqQueueProcessing/MsmqQueueProcessor.svc?disco" />
+    <MetadataFile FileName="MsmqQueueProcessor.xsd" MetadataType="Schema" ID="c17081bc-6035-4153-b6eb-71d119a2d315" SourceId="1" SourceUrl="http://localhost/TicketingSolutionMsmqQueueProcessing/MsmqQueueProcessor.svc?xsd=xsd2" />
+    <MetadataFile FileName="MsmqQueueProcessor1.xsd" MetadataType="Schema" ID="ed886043-2d88-443b-954c-fef5cf05e917" SourceId="1" SourceUrl="http://localhost/TicketingSolutionMsmqQueueProcessing/MsmqQueueProcessor.svc?xsd=xsd1" />
+    <MetadataFile FileName="MsmqQueueProcessor2.xsd" MetadataType="Schema" ID="45c32872-f237-418a-b8c0-647ec0ccddc4" SourceId="1" SourceUrl="http://localhost/TicketingSolutionMsmqQueueProcessing/MsmqQueueProcessor.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

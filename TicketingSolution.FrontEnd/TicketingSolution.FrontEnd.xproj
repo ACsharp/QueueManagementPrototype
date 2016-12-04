@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>bd7e4960-7cee-48e9-aabe-b8196b4e8298</ProjectGuid>
+    <RootNamespace>TicketingSolution.FrontEnd</RootNamespace>
+    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
+    <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <DnxInvisibleContent Include="bower.json" />
+    <DnxInvisibleContent Include=".bowerrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TicketingSolution.BusinessEntities\TicketingSolution.BusinessEntities.csproj" />
+    <ProjectReference Include="..\TicketingSolution.DataAccess.Direct.Impl\TicketingSolution.DataAccess.Direct.Impl.csproj" />
+    <ProjectReference Include="..\TicketingSolution.DataAccess.Direct.Interfaces\TicketingSolution.DataAccess.Direct.Interfaces.csproj" />
+    <ProjectReference Include="..\TicketingSolution.DataAccess.Entities\TicketingSolution.DataAccess.Entities.csproj" />
+    <ProjectReference Include="..\TicketingSolution.Messaging.QueueWriting.Interfaces\TicketingSolution.Messaging.QueueWriting.Interfaces.csproj" />
+    <ProjectReference Include="..\TicketingSolution.Messaging.QueueWriting.Msmq\TicketingSolution.Messaging.QueueWriting.Msmq.csproj" />
+    <ProjectReference Include="..\TicketingSolution.Messaging.QueueWriting.NServiceBus\TicketingSolution.Messaging.QueueWriting.NServiceBus.csproj" />
+    <ProjectReference Include="..\TicketingSolution.Messaging.QueueWriting.SqlServiceBroker\TicketingSolution.Messaging.QueueWriting.SqlServiceBroker.csproj" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\DotNet.Web\Microsoft.DotNet.Web.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
